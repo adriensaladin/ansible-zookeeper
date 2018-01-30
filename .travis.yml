@@ -14,6 +14,8 @@ env:
 before_install:
 - sudo apt-get update -qq
 - sudo apt-get install systemd-services
+- sudo apt-get -y install lxd
+- sudo lxd init --auto
 
 install:
 - pip install ansible==$ANSIBLE_VERSION
